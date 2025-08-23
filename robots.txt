@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Excluir la página de 404
+Disallow: /404.html
+
+# Excluir la página de privacidad (si no quieres que sea indexada)
+Disallow: /privacidad.html
+
+# Excluir la página de términos (si no quieres que sea indexada)
+Disallow: /terminos.html

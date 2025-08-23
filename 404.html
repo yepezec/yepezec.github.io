@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404 - Página no encontrada</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/jy.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Gradient animations */
+        .gradient-bg {
+            background: linear-gradient(-45deg, #1e40af, #3b82f6, #1d4ed8, #2563eb);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Floating animation */
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Error number animation */
+        .error-number {
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #48cae4, #ff6b6b);
+            background-size: 400% 400%;
+            animation: colorShift 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        @keyframes colorShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Bounce animation for buttons */
+        .bounce-in {
+            animation: bounceIn 0.8s ease-out;
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0.3) rotate(-10deg); opacity: 0; }
+            50% { transform: scale(1.1) rotate(5deg); opacity: 0.8; }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+        
+        /* Glowing effect */
+        .glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+        .glow:hover {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+            transform: translateY(-2px);
+        }
+        
+        /* Parallax icons */
+        .parallax-icon {
+            animation: parallax 20s linear infinite;
+            opacity: 0.1;
+        }
+        
+        @keyframes parallax {
+            0% { transform: translateX(-100px) rotate(0deg); }
+            100% { transform: translateX(calc(100vw + 100px)) rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+    
+    <!-- Background animated icons -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <i data-lucide="scale" class="parallax-icon absolute top-20 w-16 h-16" style="animation-delay: 0s;"></i>
+        <i data-lucide="briefcase" class="parallax-icon absolute top-40 w-12 h-12" style="animation-delay: -5s;"></i>
+        <i data-lucide="shield-check" class="parallax-icon absolute top-60 w-20 h-20" style="animation-delay: -10s;"></i>
+        <i data-lucide="users" class="parallax-icon absolute top-80 w-14 h-14" style="animation-delay: -15s;"></i>
+        <i data-lucide="file-text" class="parallax-icon absolute bottom-40 w-18 h-18" style="animation-delay: -8s;"></i>
+        <i data-lucide="building-2" class="parallax-icon absolute bottom-60 w-16 h-16" style="animation-delay: -12s;"></i>
+    </div>
+
+    <!-- Header -->
+    <header class="relative z-20 bg-white/10 backdrop-blur-sm border-b border-white/20">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="/" class="flex-shrink-0 flex items-center group">
+                <img src="img/jy2.svg" alt="JY Legal" class="h-12 w-auto transition-all duration-300 group-hover:scale-110">
+            </a>
+            
+            <!-- Quick Actions -->
+            <div class="flex items-center space-x-4">
+                <a href="/#contacto" 
+                   class="hidden sm:flex items-center bg-white/20 hover:bg-white/30 backdrop-blur-sm px-4 py-2 rounded-full transition-all duration-300">
+                    <i data-lucide="user" class="w-4 h-4 mr-2"></i>
+                    Contacto
+                </a>
+                <a href="tel:0999933361" 
+                   class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-full transition-all duration-300 flex items-center">
+                    <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                    <span class="hidden sm:inline">Llamar</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex items-center justify-center relative z-10 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            
+            <!-- Large 404 -->
+            <div class="mb-8">
+                <h1 class="error-number text-8xl sm:text-9xl lg:text-[12rem] font-black leading-none mb-4">404</h1>
+                <div class="flex justify-center mb-6">
+                    <div class="bg-white/20 backdrop-blur-sm rounded-full p-6 float">
+                        <i data-lucide="search-x" class="w-16 h-16 text-white"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Error Message -->
+            <div class="mb-12 space-y-6">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                    ¡Oops! Página no encontrada
+                </h2>
+                <p class="text-xl sm:text-2xl opacity-90 max-w-2xl mx-auto leading-relaxed">
+                    Parece que la página que buscas no existe o ha sido movida. No te preocupes, te ayudamos a encontrar lo que necesitas.
+                </p>
+            </div>
+
+            <!-- Quick Solutions -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+                <!-- Servicios -->
+                <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 bounce-in" style="animation-delay: 0.2s;">
+                    <div class="bg-blue-500 rounded-full p-4 inline-block mb-4">
+                        <i data-lucide="briefcase" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Ver Servicios</h3>
+                    <p class="text-blue-100 mb-4">Conoce todas las áreas legales en las que te puedo ayudar.</p>
+                    <a href="/#servicios" 
+                       class="inline-flex items-center text-yellow-300 hover:text-yellow-200 font-semibold transition-colors">
+                        Explorar servicios
+                        <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Contacto -->
+                <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 bounce-in" style="animation-delay: 0.4s;">
+                    <div class="bg-green-500 rounded-full p-4 inline-block mb-4">
+                        <i data-lucide="message-circle" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Contacto Directo</h3>
+                    <p class="text-blue-100 mb-4">¿Necesitas asesoría inmediata? Hablemos por WhatsApp.</p>
+                    <a href="https://wa.me/593999933361?text=Hola%20Jorge,%20necesito%20asesor%C3%ADa%20legal" 
+                       target="_blank"
+                       class="inline-flex items-center text-yellow-300 hover:text-yellow-200 font-semibold transition-colors">
+                        Escribir ahora
+                        <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Sobre mí -->
+                <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 bounce-in" style="animation-delay: 0.6s;">
+                    <div class="bg-purple-500 rounded-full p-4 inline-block mb-4">
+                        <i data-lucide="user" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Conoce mi Perfil</h3>
+                    <p class="text-blue-100 mb-4">Descubre mi experiencia y formación académica.</p>
+                    <a href="/#sobre-mi" 
+                       class="inline-flex items-center text-yellow-300 hover:text-yellow-200 font-semibold transition-colors">
+                        Ver perfil
+                        <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Main Actions -->
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="/" 
+                   class="bg-white text-blue-700 hover:bg-gray-100 transition-all duration-300 text-lg font-bold py-4 px-8 rounded-full shadow-lg glow flex items-center bounce-in" 
+                   style="animation-delay: 0.8s;">
+                    <i data-lucide="home" class="w-5 h-5 mr-2"></i>
+                    Volver al Inicio
+                </a>
+                
+                <a href="https://wa.me/593999933361?text=Hola%20Jorge,%20me%20perd%C3%AD%20en%20tu%20sitio%20web%20y%20necesito%20ayuda" 
+                   target="_blank"
+                   class="border-2 border-white text-white hover:bg-white hover:text-blue-700 transition-all duration-300 text-lg font-bold py-4 px-8 rounded-full flex items-center bounce-in" 
+                   style="animation-delay: 1s;">
+                    <i data-lucide="life-buoy" class="w-5 h-5 mr-2"></i>
+                    Necesito Ayuda
+                </a>
+            </div>
+
+            <!-- Additional Help -->
+            <div class="mt-16 bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-3xl mx-auto">
+                <h3 class="text-2xl font-bold mb-6 flex items-center justify-center">
+                    <i data-lucide="help-circle" class="w-6 h-6 mr-3 text-yellow-300"></i>
+                    ¿Qué puedes hacer ahora?
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                    <div class="space-y-4">
+                        <h4 class="font-semibold text-lg text-yellow-300">Si buscabas información legal:</h4>
+                        <ul class="space-y-2 text-blue-100">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mr-2 mt-0.5"></i>
+                                Ve mis servicios especializados
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mr-2 mt-0.5"></i>
+                                Conoce mi experiencia profesional
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mr-2 mt-0.5"></i>
+                                Solicita una consulta gratuita
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <h4 class="font-semibold text-lg text-yellow-300">Si necesitas ayuda urgente:</h4>
+                        <ul class="space-y-2 text-blue-100">
+                            <li class="flex items-start">
+                                <i data-lucide="phone" class="w-5 h-5 text-green-400 mr-2 mt-0.5"></i>
+                                <div>
+                                    <span>Llama al: </span>
+                                    <a href="tel:0999933361" class="text-yellow-300 hover:text-yellow-200 font-semibold">099 993 3361</a>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="mail" class="w-5 h-5 text-green-400 mr-2 mt-0.5"></i>
+                                <div>
+                                    <span>Email: </span>
+                                    <a href="mailto:jyepezlexis@gmail.com" class="text-yellow-300 hover:text-yellow-200 font-semibold">jyepezlexis@gmail.com</a>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-green-400 mr-2 mt-0.5"></i>
+                                <span>Oficina: Rocafuerte y Grijalva 3-50, Ibarra</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-20 bg-black/30 backdrop-blur-sm border-t border-white/10 py-8 mt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="img/jy2.svg" alt="JY Legal" class="h-8 w-auto mr-3">
+                    <p class="text-sm text-blue-100">
+                        &copy; 2024 Jorge Augusto Yépez Herrera. Todos los derechos reservados.
+                    </p>
+                </div>
+                
+                <div class="flex items-center space-x-6">
+                    <span class="text-sm text-blue-100 flex items-center">
+                        <i data-lucide="shield-check" class="w-4 h-4 mr-2 text-green-400"></i>
+                        Sitio Web Seguro
+                    </span>
+                    <span class="text-sm text-blue-100 flex items-center">
+                        <i data-lucide="clock" class="w-4 h-4 mr-2 text-yellow-400"></i>
+                        Disponible 24/7
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializar iconos de Lucide
+        lucide.createIcons();
+
+        // Efecto de parallax para el mouse
+        document.addEventListener('mousemove', (e) => {
+            const cursor = { x: e.clientX, y: e.clientY };
+            const icons = document.querySelectorAll('.float');
+            
+            icons.forEach((icon, index) => {
+                const speed = (index + 1) * 0.02;
+                const x = (cursor.x - window.innerWidth / 2) * speed;
+                const y = (cursor.y - window.innerHeight / 2) * speed;
+                
+                icon.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+
+        // Animación de entrada para los elementos
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('bounce-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos que necesitan animación
+        document.querySelectorAll('.bg-white\\/15').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Efecto de escritura para el mensaje de error (opcional)
+        function typeWriter(element, text, speed = 50) {
+            element.textContent = '';
+            let i = 0;
+            
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            
+            type();
+        }
+
+        // Aplicar efecto de escritura al título principal
+        window.addEventListener('load', () => {
+            const mainTitle = document.querySelector('h2');
+            if (mainTitle) {
+                const originalText = mainTitle.textContent;
+                setTimeout(() => {
+                    typeWriter(mainTitle, originalText, 80);
+                }, 1000);
+            }
+        });
+
+        // Precargar la página principal para navegación más rápida
+        const linkPrefetch = document.createElement('link');
+        linkPrefetch.rel = 'prefetch';
+        linkPrefetch.href = '/';
+        document.head.appendChild(linkPrefetch);
+    </script>
+</body>
+</html>
